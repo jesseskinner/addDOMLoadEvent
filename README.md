@@ -2,9 +2,23 @@ addDOMLoadEvent
 ===============
 
 Cross-browser method of adding DOMContentLoaded events.
-By Jesse Skinner, June 2006
 
-Original blog post: [http://www.thefutureoftheweb.com/blog/adddomloadevent](http://www.thefutureoftheweb.com/blog/adddomloadevent)
+---
+
+To use: call addDOMLoadEvent one or more times with functions, ie:
+
+    function something() {
+        // do something
+    }
+    addDOMLoadEvent(something);
+
+    addDOMLoadEvent(function() {
+        // do other stuff
+    });
+
+---
+
+Original blog post (Jesse Skinner, June 2006): [http://www.thefutureoftheweb.com/blog/adddomloadevent](http://www.thefutureoftheweb.com/blog/adddomloadevent)
 
 There has been a problem with using window.onload in JavaScript. This event handler waits until all the images and other files load before executing. If you need some JavaScript to execute when the page loads, you usually only need the HTML to be downloaded, not all the images.
 
